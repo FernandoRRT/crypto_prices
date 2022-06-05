@@ -1,0 +1,27 @@
+[
+    {
+        "id": "bitcoin",
+        "symbol": "btc",
+        "name": "Bitcoin"
+    },
+    {
+        "id": "ethereum",
+        "symbol": "eth",
+        "name": "Ethereum"
+    },
+    {
+        "id": "dacxi",
+        "symbol": "dacxi",
+        "name": "Dacxi"
+    },
+    {
+        "id": "cosmos",
+        "symbol": "atom",
+        "name": "Cosmos Hub"
+    },
+    {
+        "id": "terra-luna-2",
+        "symbol": "luna",
+        "name": "Terra"
+    }
+]
