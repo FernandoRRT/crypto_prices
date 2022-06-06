@@ -33,8 +33,8 @@
           >
             <ul class="topnavbar-ul">
               <li class="nav-item">
-                <a class="topnavbar-ul-links"
-                  href="#pablo"
+                <router-link class="topnavbar-ul-links"
+                  to="/bitcoin"
                 >
                   <img
                     :srcset="`${icons.btcT} 768w, ${icons.btcS} 1536w`"
@@ -42,11 +42,11 @@
                     :src="icons.btcS"
                     alt="The Bitcoin logo is a coin with a B in the center"
                   />
-                </a>
+                </router-link>
               </li>
               <li class="nav-item">
-                <a class="topnavbar-ul-links"
-                  href="#pablo"
+                <router-link class="topnavbar-ul-links"
+                  to="/ethereum"
                 >
                   <img
                     :srcset="`${icons.ethT} 768w, ${icons.ethS} 1536w`"
@@ -54,11 +54,11 @@
                     :src="icons.ethS"
                     alt="The Ethereum symbol is two pyramids, one above and one below, mirroring the one above."
                   />
-                </a>
+                </router-link>
               </li>
               <li class="nav-item">
-                <a class="topnavbar-ul-links"
-                  href="#pablo"
+                <router-link class="topnavbar-ul-links"
+                  to="/dacxi"
                 >
                   <img
                     :srcset="`${icons.dacxiT} 768w, ${icons.dacxiS} 1536w`"
@@ -66,11 +66,11 @@
                     :src="icons.dacxiS"
                     alt="The Dacxi symbol is a straight, solid line that is bent to look like a D."
                   />
-                </a>
+                </router-link>
               </li>
               <li class="nav-item">
-                <a class="topnavbar-ul-links"
-                  href="#pablo"
+                <router-link class="topnavbar-ul-links"
+                  to="/cosmos"
                 >
                   <img
                     :srcset="`${icons.atomT} 768w, ${icons.atomS} 1536w`"
@@ -78,11 +78,11 @@
                     :src="icons.atomS"
                     alt="The Cosmos symbol is the representation of an atom. In the nucleus there is a white circle that represents the nucleus of an atom and around it, several ellipses represent the electrosphere."
                   />
-                </a>
+                </router-link>
               </li>
               <li class="nav-item">
-                <a class="topnavbar-ul-links"
-                  href="#pablo"
+                <router-link class="topnavbar-ul-links"
+                  to="/terra-luna-2"
                 >
                   <img
                     :srcset="`${icons.lunaT} 768w, ${icons.lunaS} 1536w`"
@@ -90,7 +90,7 @@
                     :src="icons.lunaS"
                     alt="The Earth Coin symbol is a yellow circle, which represents a planet and around its left side it is covered in solar flames."
                   />
-                </a>
+                </router-link>
               </li>
             </ul>
           </div>
@@ -105,7 +105,7 @@ export default {
   name: "TopBar",
   data() {
     return {
-      showMenu: undefined,
+      showMenu: null,
       width: window.innerWidth,
       icons: {
         btcT:"https://assets.coingecko.com/coins/images/1/thumb/bitcoin.png?1547033579",
@@ -126,11 +126,9 @@ export default {
       this.showMenu = !this.showMenu;
     },
   },
-  computed: {
-    setShowMenu() {
-      this.width >= 640 ? this.showMenu = true : this.showMenu = false 
-    },
-  },
+  created: function () {
+    this.width >= 640 ? this.showMenu = true : this.showMenu = false 
+  }
 };
 </script>
 

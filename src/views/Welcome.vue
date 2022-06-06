@@ -1,10 +1,10 @@
 <template>
-    Teste
+    Welcome!
 </template>
 
 <script>
 export default {
-    name: "Dashboard",
+    name: "Welcome",
 };
 </script>
 
