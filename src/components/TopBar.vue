@@ -34,7 +34,7 @@
             <ul class="topnavbar-ul">
               <li class="nav-item">
                 <router-link class="topnavbar-ul-links"
-                  to="/bitcoin"
+                  to="/btc"
                 >
                   <img
                     :srcset="`${icons.btcT} 768w, ${icons.btcS} 1536w`"
@@ -46,7 +46,7 @@
               </li>
               <li class="nav-item">
                 <router-link class="topnavbar-ul-links"
-                  to="/ethereum"
+                  to="/eth"
                 >
                   <img
                     :srcset="`${icons.ethT} 768w, ${icons.ethS} 1536w`"
@@ -70,7 +70,7 @@
               </li>
               <li class="nav-item">
                 <router-link class="topnavbar-ul-links"
-                  to="/cosmos"
+                  to="/atom"
                 >
                   <img
                     :srcset="`${icons.atomT} 768w, ${icons.atomS} 1536w`"
@@ -82,7 +82,7 @@
               </li>
               <li class="nav-item">
                 <router-link class="topnavbar-ul-links"
-                  to="/terra-luna-2"
+                  to="/luna"
                 >
                   <img
                     :srcset="`${icons.lunaT} 768w, ${icons.lunaS} 1536w`"

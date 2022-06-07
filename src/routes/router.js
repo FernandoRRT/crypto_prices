@@ -10,11 +10,11 @@ const routes = [
         component: Welcome
     },
     {
-        path: '/bitcoin',
-        component: Dashboard
+        path: '/btc',
+        component: Dashboard,
     },
     {
-        path: '/ethereum',
+        path: '/eth',
         component: Dashboard
     },
     {
@@ -22,11 +22,11 @@ const routes = [
         component: Dashboard
     },
     {
-        path: '/cosmos',
+        path: '/atom',
         component: Dashboard
     },
     {
-        path: '/terra-luna-2',
+        path: '/luna',
         component: Dashboard
     },
 ];
