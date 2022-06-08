@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         bgprimary: '#000032',
         bgsecondary: '#AA69FF',
+        bgtertiary: '#F1EFEF',
         txprimary: '#212529',
         txsecondary: '#F1FFFF',
       },

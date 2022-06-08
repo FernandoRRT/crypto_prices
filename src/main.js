@@ -23,11 +23,10 @@ library.add( faBars, faCopyright )
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 
+//Plugins calls
 // Prime vue
 Vue.use(PrimeVue)
 Vue.component('Calendar', Calendar)
-//Plugins calls
-
 
 
 Vue.mount('#app')
