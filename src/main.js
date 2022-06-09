@@ -7,9 +7,6 @@ import router from './routes/router'
 Vue.use(router)
 // Tailwind CSS Imports
 import './assets/index.css'
-//PrimeVue imports
-import PrimeVue from 'primevue/config'
-import Calendar from 'primevue/calendar';
 //FontAwesome imports
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBars, faCopyright } from '@fortawesome/free-solid-svg-icons'
@@ -24,9 +21,6 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 
 //Plugins calls
-// Prime vue
-Vue.use(PrimeVue)
-Vue.component('Calendar', Calendar)
 
 
 Vue.mount('#app')

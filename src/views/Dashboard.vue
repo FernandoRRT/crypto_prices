@@ -1,12 +1,18 @@
 <template>
   {{ this.$route.path }}
   {{ this.dados.id }}
-  <Calendar 
-    v-model="today" 
-    :inline="true" 
-    selectionMode="single"
-    dateFormat="dd.mm.yy" 
-    :showButtonBar="false" />
+    <main class="dashboard">
+        <article class="card">
+            <section class="card__body">
+                Part 1
+            </section>
+                        <section class="card__body">
+                Part 2
+            </section>
+        </article>
+    </main>
+
+<input type="date" v-model="today">
 </template>
 
 <script>
@@ -16,8 +22,8 @@ import ApiMixin from "../services/ApiMixin";
 export default {
   name: "Dashboard",
   data: () => ({
-    today: new Date(),
     searchDate: '',
+    today: (new Date(Date.now() - ((new Date()).getTimezoneOffset() * 60000))).toISOString().slice(0, 10),
     }),
   mixins: [ApiMixin],
   methods: {
@@ -35,15 +41,14 @@ export default {
       }
     },
   },
-  computed: {},
+
   watch: {
-    today(modified) {
-      this.searchDate = ((modified.getDate() )) + "-" + ((modified.getMonth() + 1)) + "-" + modified.getFullYear(),
-      console.log(this.searchDate)
+    today(newDate) {
+        this.searchDate = newDate
+        console.log(this.searchDate)
     }    
   },
   created() {
-    console.log(this.searchDate )
     this.getDadosApi(
       `https://api.coingecko.com/api/v3/coins/${
         this.coinsId[this.$route.path]
@@ -59,59 +64,29 @@ export default {
   },
 };
 </script>
-
+<!-- <style scoped> -->
 <style>
-.p-calendar {
-  @apply bg-bgtertiary rounded-md border-2 border-txprimary p-2;
+.dashboard{
+    @apply p-4;
 }
-.p-calendar-w-btn {
-  @apply bg-purple-900;
-  }	
-/* Main container element when button is enabled. */
-.p-calendar-timeonly {
-  
-  }	
-/* Main container element in time picker only mode. */
-.p-inputtext {
-  
-  }	
-/* Input element */
-.p-datepicker {
-  
-  }	
-/* Datepicker element */
-.p-datepicker-inline {
-  
-  }	
-/* Datepicker element in inline mode */
-.p-monthpicker {
-  
-  }
-/* Datepicker element in month view. */
-.p-monthpicker-month {
-  
-  }	
-/* Month cell in month view mode. */
-.p-datepicker-touch-ui {
-  
-  }	
-/* Datepicker element in touch ui mode. */
-.p-datepicker-calendar {
-  
-  }	
-/* Table containing dates of a month. */
-.p-datepicker-current-day {
-  
-  }	
-/* Cell of selected date. */
-.p-datepicker-today {
-  /* @apply bg-bgtertiary border-2 border-bgsecondary; */
+.card {
+  @apply 
+    rounded-md 
+    border-2 
+    border-txprimary 
+    flex
+    w-full 
+    sm:flex-col
+    md:flex-col
+    lg:flex-row
+    gap-3
+    ; 
+}
+.card__body{
+    @apply bg-bgtertiary rounded-md border-2 border-txprimary p-1 w-full ;
+}
 
-}	
-/* Cell of today's date. */
 </style>
-
-
 
 
 
